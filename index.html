@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jamhuri Airport Transfers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Jamhuri Airport Transfers</h1>
+    <p>Karibu Nyumbani with Smooth Rides</p>
+  </header>
+
+  <!-- Booking Section -->
+  <section class="form-section">
+    <h2>Book a Ride</h2>
+    <form id="bookingForm" action="https://formspree.io/f/yourBookingFormID" method="POST">
+      <label for="carType">Select Car Type:</label>
+      <select id="carType" name="Car Type" required>
+        <option value="">--Choose--</option>
+        <option value="Regular">Regular (Fielder, Sienta, Axio) - From KES 3,500</option>
+        <option value="Extra">Extra Space 7-Seater (Noah, Voxy, Esquire, Serena) - From KES 5,000</option>
+      </select>
+
+      <label for="pickup">Pickup Location:</label>
+      <input type="text" id="pickup" name="Pickup Location" required />
+
+      <label for="dropoff">Drop-off Location:</label>
+      <input type="text" id="dropoff" name="Drop-off Location" required />
+
+      <button type="submit">Book Now</button>
+    </form>
+    <div id="bookingResult"></div>
+  </section>
+
+  <!-- Driver Registration Section -->
+  <section class="form-section">
+    <h2>Driver Registration</h2>
+    <form id="driverForm" action="https://formspree.io/f/yourDriverFormID" method="POST">
+      <label for="driverName">Full Name:</label>
+      <input type="text" id="driverName" name="Full Name" required />
+
+      <label for="carModel">Car Model:</label>
+      <select id="carModel" name="Car Model" required>
+        <option value="">--Choose--</option>
+        <option value="Toyota Noah">Toyota Noah</option>
+        <option value="Toyota Voxy">Toyota Voxy</option>
+        <option value="Toyota Esquire">Toyota Esquire</option>
+        <option value="Toyota Sienta">Toyota Sienta</option>
+        <option value="Toyota Fielder">Toyota Fielder</option>
+        <option value="Toyota Axio">Toyota Axio</option>
+        <option value="Nissan Serena">Nissan Serena</option>
+      </select>
+
+      <label for="year">Car Year (Must be above 2016):</label>
+      <input type="number" id="year" name="Car Year" min="2017" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="Phone Number" required />
+
+      <button type="submit">Register</button>
+    </form>
+    <div id="registrationResult"></div>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/254714816648" target="_blank" class="whatsapp-button">
+    Chat on WhatsApp
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
